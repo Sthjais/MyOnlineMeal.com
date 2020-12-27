@@ -1,0 +1,280 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height:59px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    /* top: 0px; */
+}
+
+#navbar::before {
+    content:"";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+/* Navigation Bar : Logo and Image */
+/* #log{
+    margin:56px;
+} */
+
+#logo img{
+    width: 120px;
+    height: 100px;
+    margin: 0 32px;
+    filter: invert(.8);
+    filter: drop-shadow(1.2px 1px 6px white);
+}
+
+/* Navigation Bar : List Styling */
+#navbar ul{
+    display: flex;
+    /* margin: 0rem 2rem 0rem 60rem; */
+    font-family: 'Baloo 2', cursive;
+}
+
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    /* margin: 0px 10px; */
+}
+
+#navbar ul li a{
+    color: white;
+    /* border: 1.2px solid whitesmoke; */
+    /* color: black; */
+    display: block;
+    padding: 3px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 410px;
+    justify-content: center;
+    align-items: center;
+    /* margin: 10px 0px 50px 0px; */
+    /* border: 2px solid red; */
+}
+
+#home::before{
+    content:"";
+    position: absolute;
+    background: url('../bg6.jpg') no-repeat center center/cover;
+    /* background-size: cover; */
+    top: 0px;
+    left: 0px;
+    height: 520px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.75;
+    
+}
+
+#home h1{
+    color: white;
+    text-shadow: 4px 4px 5px black;
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-size: 4rem;
+    font-weight: 1500;
+    padding: 20px 15px;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Services Section */
+#services{
+    margin: 20px 30px;
+    display: flex;
+}
+
+#services .box{
+    border: 2px solid red;
+    padding: 24px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background-color: rgba(236, 234, 234, 0.534);
+
+}
+
+#services .box img{
+    height: 156px;
+    display: block;
+    margin: auto;
+}
+
+#services .box p{
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.2rem;
+}
+
+/* Clients Section */
+#client-section{
+    /* border: 2px solid red; */
+    /* height: 350px; */
+    position: relative;
+    margin: 50px 0px;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../img/basil-leaves-chia-seeds-halved-tomato-oil-arranged-white-wooden-floor_23-2148026880.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 50px 80px;
+}
+
+#clients img{
+    height: 100px;
+    filter: grayscale(100%);
+}
+
+#clients img:hover{
+    filter: grayscale(0);
+}
+
+/* Contact Section */
+#contact{
+position: relative;
+/* border: 2px solid red; */
+}
+
+#contact::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../contact-us.png') no-repeat left center/cover;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#contact-box input, textarea{
+    width: 100%;
+    padding: .5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+.form-group label{
+    font-size: 1.3rem;
+     /* font-family: 'Baloo 2', cursive; */
+}
+
+.form-group input{
+    margin: 5px 0px 15px 0px
+     /* font-family: 'Baloo 2', cursive; */
+}
+
+/* Footer */
+footer{
+    background: black;
+    color: white;
+    padding: 16px 20px;
+    
+}
+
+/* Utility Class */
+.h-primary{
+    font-size: 4rem;
+    padding: 12px;
+    font-family: 'Baloo 2', cursive;
+    text-shadow: 4px 4px 5px rgba(141, 139, 139, 0.911);
+}
+
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.btn{
+    padding: 8px 20px;
+    border: 2px solid white;
+    background-color: darkred;
+    color: white;
+    cursor: pointer;
+    margin: 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.btn:hover{
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    /* cursor: pointer;
+    margin: 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-family: 'Baloo 2', cursive; */
+}
+
+.center{
+    text-align: center;
+}
+
